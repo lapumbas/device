@@ -1045,7 +1045,49 @@ a {
 }
 
 .price-range {
-  height: 105px;
+  min-height: 65px;
+}
+
+.price-range p {
+  /* display: block; */
+  position: absolute;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  top: 20px;
+}
+
+.scale {
+  width: 196px;
+  height: 2px;
+  background-color: rgb(219, 219, 219);
+}
+
+.range {
+  width: 110px;
+  height: 2px;
+  background-color: rgb(145, 201, 47);
+  position: relative;
+}
+
+/* .range>div {
+  display: flex;
+} */
+
+.range-knob {
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  background: url("../img/svg-device/filter-button.svg") no-repeat 0 0;
+  top: -10px;
+}
+
+.range-min {
+  left: 0px;
+}
+
+.range-max {
+  left: 110px;
 }
 
 .filter-form fieldset {
@@ -1233,6 +1275,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 .catalog-item div>p {
