@@ -9,69 +9,72 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <h2 class="visually-hidden">Основное меню</h2>
-    <img class="main-logo" src="img/svg-device/logo-vector.svg" alt="main-logo">
+  <div class="container">
 
-    <nav class="user-navigation">
-      <form class="search-form" action="#" method="get" name="search-form">
-        <input type="text" name="site-search" placeholder="Поиск по сайту" id="seach-field">
-        <label class="search-form-label" for="seach-field">
-          <span class="visually-hidden">Поиск по сайту</span>
-        </label>
-        <input class="button search-button" type="submit" name="seach" value="Найти">
-      </form>
+    <header class="main-header">
+      <h2 class="visually-hidden">Основное меню</h2>
+      <img class="main-logo" src="img/svg-device/logo-vector.svg" alt="main-logo">
 
-      <ul class="user-list">
-        <li>
-          <a class="user-link link-enter" href="#">Войти</a>
-        </li>
-        <li>
-          <a class="user-link link-compare" href="#">Сравнить</a>
-        </li>
-        <li>
-          <a class="user-link link-chart" href="#">Корзина</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="user-navigation">
 
-    <ul class="services-list">
-      <li class="services-item">
-        <a href="#">Каталог товаров
-          <span class="secondmenu-item-plus">+</span>
-        </a>
-        <ul class="menu-catalogue-list">
-          <li class="menu-catalogue-item">
-            <a href="#">Виртуальная реальность</a>
+        <form class="search-form" action="#" method="get" name="search-form">
+          <label class="search-form-label" for="seach-field">
+            <span class="visually-hidden">Поиск по сайту</span>
+          </label>
+          <input type="text" name="site-search" placeholder="Поиск по сайту" id="seach-field">
+          <input class="search-button" type="submit" name="seach" value="Найти">
+        </form>
+
+        <ul class="user-list">
+          <li>
+            <a class="user-link link-enter" href="#">Войти</a>
           </li>
-          <li class="menu-catalogue-item">
-            <a href="#">Моноподы для селфи</a>
+          <li>
+            <a class="user-link link-compare" href="#">Сравнить</a>
           </li>
-          <li class="menu-catalogue-item">
-            <a href="#">Экшн-камеры</a>
-          </li>
-          <li class="menu-catalogue-item">
-            <a href="#">Фитнес-браслеты</a>
-          </li>
-          <li class="menu-catalogue-item">
-            <a href="#">Умные часы</a>
-          </li>
-          <li class="menu-catalogue-item">
-            <a href="#">Квадрокоптеры</a>
+          <li>
+            <a class="user-link link-chart" href="#">Корзина</a>
           </li>
         </ul>
-      </li>
-      <li class="services-item">
-        <a href="#">Доставка</a>
-      </li>
-      <li class="services-item">
-        <a href="#">Гарантия</a>
-      </li>
-      <li class="services-item">
-        <a href="#">Контакты</a>
-      </li>
-    </ul>
-  </header>
+      </nav>
+
+      <ul class="services-list">
+        <li class="services-item">
+          <a href="#">Каталог товаров
+          </a>
+          <ul class="menu-catalogue-list">
+            <li class="menu-catalogue-item">
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li class="menu-catalogue-item">
+              <a href="#">Моноподы для селфи</a>
+            </li>
+            <li class="menu-catalogue-item">
+              <a href="#">Экшн-камеры</a>
+            </li>
+            <li class="menu-catalogue-item">
+              <a href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="menu-catalogue-item">
+              <a href="#">Умные часы</a>
+            </li>
+            <li class="menu-catalogue-item">
+              <a href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="services-item">
+          <a href="#">Доставка</a>
+        </li>
+        <li class="services-item">
+          <a href="#">Гарантия</a>
+        </li>
+        <li class="services-item">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </header>
+  </div>
 
 
 
@@ -143,47 +146,55 @@
 
       </ul>
     </section>
+  </main>
 
     <section class="services">
-      <h2 class="visually-hidden">Наши услуги</h2>
-      <ul class="services-menu">
-        <li class="services-menu-item">
-          <button class="button services-menu-button">
-            <div>Доставка</div>
-          </button>
-        </li>
-        <li class="services-menu-item">
-          <button class="button services-menu-button">
-            <div>Гарантия</div>
-          </button>
-        </li>
-        <li class="services-menu-item">
-          <button class="button services-menu-button">
-            <div>Кредит</div>
-          </button>
-        </li>
-      </ul>
+      <div class="container">
 
-      <section class="services-delivery">
-        <h2 class="services-header">Доставка</h2>
-        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая
-          его на ваш этаж.</p>
-      </section>
+        <h2 class="visually-hidden">Наши услуги</h2>
+
+        <ul class="services-menu">
+          <li class="services-menu-item">
+            <button class="button services-menu-button active">
+              <div>Доставка</div>
+            </button>
+          </li>
+          <li class="services-menu-item">
+            <button class="button services-menu-button">
+              <div>Гарантия</div>
+            </button>
+          </li>
+          <li class="services-menu-item">
+            <button class="button services-menu-button">
+              <div>Кредит</div>
+            </button>
+          </li>
+        </ul>       
+
+        <section class="services-delivery">
+          <h2 class="services-header">Доставка</h2>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
+            поднимая его на ваш этаж.</p>
+            
+          </section>
+        </div>
     </section>
+
+    <main class="container">
 
     <section class="logotypes">
       <ul>
         <li class="logos-item">
-          <img src="img/logo-1.jpg" alt="logo">
+          <img src="img/logo-1-color.png" alt="logo">
         </li>
         <li class="logos-item">
-          <img src="img/logo-3.jpg" alt="logo">
+          <img src="img/logo-3-color.png" alt="logo">
         </li>
         <li class="logos-item">
-          <img src="img/logo-4.jpg" alt="logo">
+          <img src="img/logo-2-color.png" alt="logo">
         </li>
         <li class="logos-item">
-          <img src="img/logo-5.jpg" alt="logo">
+          <img src="img/logo-4-color.png" alt="logo">
         </li>
       </ul>
     </section>
@@ -218,19 +229,19 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <img src="img/map.jpg" alt="Карта" width="560" height="222">
-        
+
         <a class="button about-button" href="#">
           <div>НАпишите нам</div>
         </a>
       </section>
     </div>
-    
-    
+
+
   </main>
-  
+
   <footer class="main-footer">
     <div class="container">
-      
+
       <section class="footer-top">
         <h2 class="visually-hidden">Меню покупателя</h2>
         <img src="img/svg-device/logo-yellow.svg" alt="logo">
@@ -248,7 +259,7 @@
           </ul>
         </nav>
       </section>
-      
+
       <section class="footer-middle">
         <h2 class="visually-hidden">То что мы можем</h2>
         <p class="footer-text">г. Москва, ул. Строителей, 15</p>
@@ -267,19 +278,25 @@
         </nav>
         <p class="footer-text">Тел.: +7 (495) 495-95-95</p>
       </section>
-      
+
       <section class="footer-bottom">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
         <div class="bottom-stroke"> </div>
         <ul class="social-list">
           <li>
-            <a class="social-button" href="#"><img src="img/svg-device/fb.svg" alt="Facebook"></a>
+            <a class="social-button" href="#">
+              <img src="img/svg-device/fb.svg" alt="Facebook">
+            </a>
           </li>
           <li>
-            <a class="social-button" href="#"><img src="img/svg-device/vk.svg" alt="ВКонтакте"></a>
+            <a class="social-button" href="#">
+              <img src="img/svg-device/vk.svg" alt="ВКонтакте">
+            </a>
           </li>
           <li>
-            <a class="social-button" href="#"><img src="img/svg-device/twitter.svg" alt="Twitter"></a>
+            <a class="social-button" href="#">
+              <img src="img/svg-device/twitter.svg" alt="Twitter">
+            </a>
           </li>
         </ul>
         <a class="developer-button" href="#">
