@@ -76,50 +76,123 @@
     </header>
   </div>
 
-
-
-
-
   <main class="container">
     <h1 class="visually-hidden">Магазин Девайс</h1>
 
-    <section class="slider">
-      <h2 class="visually-hidden">Популярные продукты</h2>
-
-      <a class="slider-image" href="#">
-        <img src="img/slider-1.png" alt="">
-      </a>
-
-      <section class="slider-description">
+    <div class="slider-wrapper">
+      <div class="slider-controls">
+        <input class="visually-hidden" id="slide-1" type="radio" name="slider" value="slide-1" checked>
+        <label for="slide-1">
+          <span class="visually-hidden">slide-1</span>
+        </label>
+        <input class="visually-hidden" id="slide-2" type="radio" name="slider" value="slide-2">
+        <label for="slide-2">
+          <span class="visually-hidden">slide-2</span>
+        </label>
+        <input class="visually-hidden" id="slide-3" type="radio" name="slider" value="slide-3">
+        <label for="slide-3">
+          <span class="visually-hidden">slide-3</span>
+        </label>
+      </div>
+      <section class="slider slide-1 slide-show">
         <h2 class="visually-hidden">Популярные продукты</h2>
-
-        <div class="stroke"></div>
-        <b class="slider-slogan">
-          Делай селфи,
-          <br> как Бен Стиллер!
-        </b>
-        <p>Самая длинная палка для селфи доступна в нашем магазине.
-          <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-        </p>
-        <a class="button slider-detail" href="#">
-          <div>Подробнее</div>
+        <a class="slider-image" href="#">
+          <img src="img/slider-1.png" alt="">
         </a>
-        <ul class="props-list">
-          <li class="props-item">
-            <p class="props-item-value">8,5 м</p>
-            <p class="props-item-property">Длина палки</p>
-          </li>
-          <li class="props-item">
-            <p class="props-item-value">5 кг</p>
-            <p class="props-item-property">Вес палки</p>
-          </li>
-          <li class="props-item">
-            <p class="props-item-value">Карбон</p>
-            <p class="props-item-property">Материал</p>
-          </li>
-        </ul>
+        <section class="slider-description">
+          <h2 class="visually-hidden">Популярные продукты</h2>
+          <div class="stroke">
+            <p>01</p>
+          </div>
+          <b class="slider-slogan">
+            Делай селфи,
+            <br> как Бен Стиллер!
+          </b>
+          <p>Самая длинная палка для селфи доступна в нашем магазине.
+            <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+          </p>
+          <a class="button slider-detail" href="#">
+            <div>Подробнее</div>
+          </a>
+          <ul class="props-list">
+            <li class="props-item">
+              <p class="props-item-value">8,5 м</p>
+              <p class="props-item-property">Длина палки</p>
+            </li>
+            <li class="props-item">
+              <p class="props-item-value">5 кг</p>
+              <p class="props-item-property">Вес палки</p>
+            </li>
+            <li class="props-item">
+              <p class="props-item-value">Карбон</p>
+              <p class="props-item-property">Материал</p>
+            </li>
+          </ul>
+        </section>
       </section>
-    </section>
+
+      <section class="slider slide-2">
+        <h2 class="visually-hidden">Популярные продукты</h2>
+        <a class="slider-image" href="#">
+          <img src="img/slider-2.png" alt="">
+        </a>
+        <section class="slider-description">
+          <h2 class="visually-hidden">Популярные продукты</h2>
+          <div class="stroke">
+            <p>02</p>
+          </div>
+          <b class="slider-slogan">
+            Худеем
+            <br> правильно!
+          </b>
+          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
+            <br> не пропускать занятия и соблюдать диету.
+          </p>
+          <a class="button slider-detail" href="#">
+            <div>Подробнее</div>
+          </a>
+          <ul class="props-list">
+            <li class="props-item">
+              <p class="props-item-value">48 часов</p>
+              <p class="props-item-property">Без подзарядки</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="slider slide-3">
+        <h2 class="visually-hidden">Популярные продукты</h2>
+        <a class="slider-image" href="#">
+          <img src="img/slider-3.png" alt="">
+        </a>
+        <section class="slider-description">
+          <h2 class="visually-hidden">Популярные продукты</h2>
+          <div class="stroke">
+            <p>03</p>
+          </div>
+          <b class="slider-slogan">
+            Порхает как бабочка,
+            <br> жалит как пчела!
+          </b>
+          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
+            <br> мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <a class="button slider-detail" href="#">
+            <div>Подробнее</div>
+          </a>
+          <ul class="props-list">
+            <li class="props-item">
+              <p class="props-item-value">800 м</p>
+              <p class="props-item-property">Дальность полета</p>
+            </li>
+            <li class="props-item">
+              <p class="props-item-value">50 м</p>
+              <p class="props-item-property">Радиус поражения</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </div>
 
     <section class="popular">
       <h2 class="visually-hidden">Популярные категории товаров</h2>
@@ -148,39 +221,39 @@
     </section>
   </main>
 
-    <section class="services">
-      <div class="container">
+  <section class="services">
+    <div class="container">
 
-        <h2 class="visually-hidden">Наши услуги</h2>
+      <h2 class="visually-hidden">Наши услуги</h2>
 
-        <ul class="services-menu">
-          <li class="services-menu-item">
-            <button class="button services-menu-button active">
-              <div>Доставка</div>
-            </button>
-          </li>
-          <li class="services-menu-item">
-            <button class="button services-menu-button">
-              <div>Гарантия</div>
-            </button>
-          </li>
-          <li class="services-menu-item">
-            <button class="button services-menu-button">
-              <div>Кредит</div>
-            </button>
-          </li>
-        </ul>       
+      <ul class="services-menu">
+        <li class="services-menu-item">
+          <button class="button services-menu-button active">
+            <div>Доставка</div>
+          </button>
+        </li>
+        <li class="services-menu-item">
+          <button class="button services-menu-button">
+            <div>Гарантия</div>
+          </button>
+        </li>
+        <li class="services-menu-item">
+          <button class="button services-menu-button">
+            <div>Кредит</div>
+          </button>
+        </li>
+      </ul>
 
-        <section class="services-delivery">
-          <h2 class="services-header">Доставка</h2>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
-            поднимая его на ваш этаж.</p>
-            
-          </section>
-        </div>
-    </section>
+      <section class="services-delivery">
+        <h2 class="services-header">Доставка</h2>
+        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая
+          его на ваш этаж.</p>
 
-    <main class="container">
+      </section>
+    </div>
+  </section>
+
+  <main class="container">
 
     <section class="logotypes">
       <ul>
@@ -305,7 +378,7 @@
       </section>
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
