@@ -243,13 +243,29 @@
           </button>
         </li>
       </ul>
-
-      <section class="services-delivery">
-        <h2 class="services-header">Доставка</h2>
-        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая
-          его на ваш этаж.</p>
-
-      </section>
+      <ul class="services-deals">
+        <li>
+          <section class="services-deal services-delivery services-show">
+            <h2 class="services-header">Доставка</h2>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
+              поднимая его на ваш этаж.</p>
+          </section>
+        </li>
+        <li>
+          <section class="services-deal services-guarantee">
+            <h2 class="services-header">Гарантия</h2>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар,
+              не дом, конечно же.</p>
+          </section>
+        </li>
+        <li>
+          <section class="services-deal services-credit">
+            <h2 class="services-header">Кредит</h2>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
+              Выгодные для нашего банка, разумеется.</p>
+          </section>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -303,7 +319,7 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <img src="img/map.jpg" alt="Карта" width="560" height="222">
 
-        <a class="button about-button" href="#">
+        <a class="button about-button write-us-btn" href="#">
           <div>НАпишите нам</div>
         </a>
       </section>
@@ -378,6 +394,46 @@
       </section>
     </div>
   </footer>
+
+  <section class="modal modal-map">
+    <button class="modal-close-btn">
+      <img src="img/svg-device/modal-close.svg" alt="Закрыть карту">
+    </button>
+    <!-- <iframe src="https://yandex.ru/map-widget/v1/-/CBqDiCQKcC" width="960" height="559" frameborder="0"></iframe> -->
+  </section>
+
+
+
+  <section class="overlay"></section>
+
+  <section class="modal modal-write-us">
+    <button class="modal-close-btn">
+      <img src="img/svg-device/modal-close.svg" alt="Закрыть модальное окно">
+    </button>
+    <form action="" method="GET">
+      <div class="modal-write-us-wrapper">
+        <p>
+          <label for="name">Ваше имя:</label>
+          <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p>
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" name="email" id="email" placeholder="Для отправки ответа">
+        </p>
+      </div>
+      <p>
+        <label for="text">Текст письма:</label>
+        <textarea placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button submit-button" type="submit">
+        <div>
+          Отправить
+        </div>
+      </button>
+    </form>
+  </section>
+
+
   <script src="js/script.js"></script>
 </body>
 

@@ -88,6 +88,17 @@ a {
   padding-bottom: 50px;
 }
 
+.main-header::after {
+  position: absolute;
+  content: "";
+  width: 1160px;
+  height: 110px;
+  background: #f8e296;
+  /* background: rgba(190, 13, 13, 0.514); */
+  bottom: -110px;
+  left: 0;
+}
+
 .main-header ul {
   list-style: none;
   padding: 0;
@@ -358,7 +369,7 @@ a {
   flex-basis: 100%;
   justify-content: flex-start;
   align-items: flex-start;
-  background: linear-gradient(to bottom, #f8e296 0%, #f8e296 22%, white 22%, white 100%);
+  /* background: linear-gradient(to bottom, #f8e296 0%, #f8e296 22%, white 22%, white 100%); */
 }
 
 .slide-3,
@@ -431,15 +442,18 @@ a {
 }
 
 @keyframes slider {
-  0% {transform: scale(0.3);}
-  100% {transform: scale(1);}
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .slide-show {
-  animation: slider 0.3s ease;
+  animation: slider 1.7s ease;
   display: flex;
 }
-
 
 .slider-slogan {
   color: #000000;
@@ -694,22 +708,46 @@ a {
   letter-spacing: 0.21px;
 }
 
-.services-delivery {
+.services-deal {
   margin-left: 120px;
   padding-top: 40px;
   height: 319px;
   width: 460px;
+  position: relative;
+}
+
+.services-deal::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 260px;
+  height: 205px;
+  right: -300px;
+  top: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .services-delivery::after {
-  content: "";
-  display: block;
-  position: relative;
-  width: 136px;
-  height: 164px;
-  left: 560px;
-  top: -185px;
   background-image: url("../img/svg-device/delivery.svg");
+}
+
+.services-guarantee::after {
+  background-image: url("../img/svg-device/warranty.svg");
+}
+
+.services-credit::after {
+  background-image: url("../img/svg-device/credit.svg");
+}
+
+.services-delivery,
+.services-guarantee,
+.services-credit {
+  display: none;
+}
+
+.services-show {
+  display: block;
 }
 
 .logotypes {
@@ -804,6 +842,7 @@ a {
 }
 
 .contacts img {
+  cursor: pointer;
   margin-top: 37px;
   margin-bottom: 70px;
 }
@@ -1421,4 +1460,151 @@ a {
 
 .current-page {
   opacity: 1;
+}
+
+.modal {
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+  z-index: 20;
+}
+
+.modal-close-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: 22px;
+  right: 22px;
+  opacity: 0.5;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  opacity: 1;
+}
+
+.modal-close-btn:active {
+  opacity: 0.3;
+}
+
+.modal-map {
+  display: none;
+  position: fixed;
+  width: 960px;
+  height: 559px;
+  top: 50%;
+  left: 50%;
+  margin-left: -480px;
+  margin-top: -280px;
+  background: url("../img/map-big.jpg") no-repeat center;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 19;
+}
+
+@keyframes modal-show {
+  0% {
+    transform: translateX(-3000px);
+  }
+  60% {
+    transform: translateX(40px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.overlay-modal-show {
+  display: block;
+}
+
+.modal-write-us {
+  display: none;
+  position: fixed;
+  width: 960px;
+  height: 553px;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -480px;
+  padding: 100px;
+  background: rgb(255, 255, 255);
+  z-index: 20;
+}
+
+.modal-write-us-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-write-us-wrapper p {
+  width: 360px;
+}
+
+.modal-write-us-wrapper input {
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 50px;
+  background: #f2f2f2;
+  border: none;
+}
+
+.modal-write-us label {
+  color: #000000;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.modal-write-us p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.modal-write-us label {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.modal-write-us textarea {
+  height: 156px;
+  background: #f2f2f2;
+  border: none;
+  padding: 20px;
+}
+
+.modal-show {
+  display: block;
+  animation-name: modal-show;
+  animation-duration: 1s;
+}
+
+@keyframes modal-shake {
+  0%, 100% {transform: translateX(0);}
+  10%,30%,50%,70%,90% {transform: translateX(-20px);}
+  20%,40%,60%,80% {transform: translateX(20px);}
+}
+
+.modal-shake {
+  animation: modal-shake 0.5s;
 }
