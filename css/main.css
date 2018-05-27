@@ -76,6 +76,44 @@ a {
   padding: 0 20px;
 }
 
+.button {
+  display: flex;
+  width: 220px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button>div {
+  display: flex;
+  background-color: #f0c52e;
+  width: inherit;
+  height: 8px;
+  color: #000000;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.215em;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f0c52e;
+  outline: none;
+}
+
+.button:active>div {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* **************************** */
 
 .main-header {
@@ -97,6 +135,10 @@ a {
   /* background: rgba(190, 13, 13, 0.514); */
   bottom: -110px;
   left: 0;
+}
+
+.inner-main-header::after {
+  display: none;
 }
 
 .main-header ul {
@@ -304,7 +346,7 @@ a {
   opacity: 0.3;
 }
 
-.services-item:nth-child(1) a::after {
+.services-item:nth-child(1)>a::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -321,14 +363,17 @@ a {
   flex-direction: column;
   align-items: flex-start;
   height: 158px;
-  width: 100%;
+  width: 1160px;
   position: absolute;
   background: #f8e296;
+  left: -60px;
   z-index: 3;
+  padding-left: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 550px;
 }
+
 
 .services-item:nth-child(1):hover .menu-catalogue-list {
   display: flex;
@@ -486,44 +531,6 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.button {
-  display: flex;
-  width: 220px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.button>div {
-  display: flex;
-  background-color: #f0c52e;
-  width: inherit;
-  height: 8px;
-  color: #000000;
-  font-family: "Gilroy";
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.215em;
-  justify-content: center;
-  align-items: center;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #f0c52e;
-  outline: none;
-}
-
-.button:active>div {
-  color: rgba(0, 0, 0, 0.3);
 }
 
 .props-item-value {
@@ -1106,6 +1113,7 @@ a {
 
 .filter-color label,
 .filter-bt label {
+  cursor: pointer;
   padding-left: 40px;
   position: relative;
   user-select: none;
@@ -1182,6 +1190,7 @@ a {
 } */
 
 .range-knob {
+  cursor: pointer;
   position: absolute;
   width: 20px;
   height: 22px;
@@ -1378,7 +1387,7 @@ a {
   padding: 0;
 }
 
-.catalog-item div {
+.catalog-item>div {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1386,12 +1395,60 @@ a {
   margin-bottom: 50px;
 }
 
-.catalog-item div>p {
+.catalog-item {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.catalog-item>.item-hover {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  width: 360px;
+  height: 379px;
+  left: 0;
+  top: 0;
+  margin: 0;
+  background-color: #eeeeee69;
+}
+
+.catalog-item:hover .item-hover {
+  display: flex;
+}
+
+.compare-button {
+  opacity: 0.5;
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 36px;
+  letter-spacing: 0.13px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 130px;
+}
+
+.compare-button:hover,
+.compare-button:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.compare-button:active {
+  opacity: 0.3;
+}
+
+.catalog-item>div>p {
   margin: 0;
   line-height: normal;
 }
 
-.catalog-item div>b {
+.catalog-item>div>b {
   color: rgb(0, 0, 0);
   font-family: "Gilroy";
   font-size: 18px;
@@ -1600,9 +1657,23 @@ a {
 }
 
 @keyframes modal-shake {
-  0%, 100% {transform: translateX(0);}
-  10%,30%,50%,70%,90% {transform: translateX(-20px);}
-  20%,40%,60%,80% {transform: translateX(20px);}
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-20px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(20px);
+  }
 }
 
 .modal-shake {
